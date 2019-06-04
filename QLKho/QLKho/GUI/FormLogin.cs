@@ -19,9 +19,10 @@ namespace QLKho.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtPass.Text =="" || txtUser.Text == "")
+            if(txtPass.Text == "" || txtUser.Text == "")
             {
-                MessageBox.Show("Mời nhập đầy đủ thông tin !!!");
+                MessageBox.Show("Hãy điền đẩy đủ mật khẩu và tên đăng nhập trước!!");
+                return;
             }
             else
             {
