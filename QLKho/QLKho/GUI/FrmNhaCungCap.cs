@@ -77,7 +77,7 @@ namespace QLKho.GUI
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text == "") MessageBox.Show("Chưa nhập thông tin tìm kiếm");
+            if (string.IsNullOrWhiteSpace(txtSearch.Text)) MessageBox.Show("Chưa nhập thông tin tìm kiếm");
             string str = txtSearch.Text;
             dgvNhacungcap.DataSource = NCCList;
             NCCList.DataSource = NhaCungCapDAO.Instance.SearchNCC(str);

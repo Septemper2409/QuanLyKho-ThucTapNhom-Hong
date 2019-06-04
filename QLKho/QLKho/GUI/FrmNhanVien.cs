@@ -59,7 +59,7 @@ namespace QLKho.GUI
             long check;
             if (MessageBox.Show("Bạn có thật sự muốn thêm nhân viên có tên là: " + txtHotennv.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (txtHotennv.Text == "" || txtEmailnv.Text == "" || txtSdtnv.Text == "" || Int64.TryParse(txtSdtnv.Text, out check) == false)
+                if ( string.IsNullOrWhiteSpace(txtHotennv.Text) || string.IsNullOrWhiteSpace(txtEmailnv.Text) || string.IsNullOrWhiteSpace(txtSdtnv.Text) || !Int64.TryParse(txtSdtnv.Text, out check))
                 {
                     MessageBox.Show("Sai hoặc thiếu thông tin");
                     //                    LoadListNV();
