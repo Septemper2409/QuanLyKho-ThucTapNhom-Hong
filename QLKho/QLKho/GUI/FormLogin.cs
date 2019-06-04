@@ -19,7 +19,7 @@ namespace QLKho.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtPass.Text == "" || txtUser.Text == "")
+            if( string.IsNullOrWhiteSpace(txtPass.Text) | string.IsNullOrWhiteSpace(txtUser.Text))
             {
                 MessageBox.Show("Hãy điền đẩy đủ mật khẩu và tên đăng nhập trước!!");
                 return;
