@@ -39,7 +39,7 @@ namespace QLKho.GUI
 
         private void chkhienthi_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkhienthi.Checked == true)
+            if (chkhienthi.Checked)
             {
                 txtPass.UseSystemPasswordChar = false;
             }
