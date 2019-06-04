@@ -88,7 +88,7 @@ namespace QLKho.GUI
             long check;
             if (MessageBox.Show("Bạn có thật sự muốn sửa nhân viên có tên là: " + txtHotennv.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                if ( string.IsNullOrWhiteSpace(txtHotennv.Text) || txtEmailnv.Text == "" || txtSdtnv.Text == "" || txtSdtnv.Text.Length != 10 || Int64.TryParse(txtSdtnv.Text, out check) == false)
+                if ( string.IsNullOrWhiteSpace(txtHotennv.Text) || string.IsNullOrWhiteSpace(txtEmailnv.Text) || txtSdtnv.Text == "" || txtSdtnv.Text.Length != 10 || Int64.TryParse(txtSdtnv.Text, out check) == false)
                 {
                     MessageBox.Show("Sai hoặc thiếu thông tin");
                 }
