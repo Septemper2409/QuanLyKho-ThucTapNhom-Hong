@@ -51,7 +51,7 @@ namespace QLKho.GUI
 
             if (MessageBox.Show("Bạn có thật sự muốn thêm nhà cũng cấp có tên là : " + txtTenncc.Text, "Thông Báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (txtTenncc.Text == "" || txtDiachincc.Text == "" || txtSdtncc.Text == "" || txtWebncc.Text == "")
+                if ( string.IsNullOrWhiteSpace(txtTenncc.Text) || string.IsNullOrWhiteSpace(txtDiachincc.Text) || txtSdtncc.Text == "" || txtWebncc.Text == "")
                 {
                     MessageBox.Show("Sai hoặc thiếu thông tin");
                 }
